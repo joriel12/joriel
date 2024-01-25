@@ -1,0 +1,56 @@
+/* feedback_styles.css */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.feedback-list {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.feedback-list h1 {
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+}
+
+.feedback-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.feedback-list li {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background: rgb(221, 220, 219);
+}
+
+.feedback-list li hr {
+    border: 0;
+    height: 1px;
+    background: #000000;
+    margin: 15px 0;
+}
+
+.feedback-list a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #1e1f20;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.feedback-list a:hover {
+    background-color: #585858;
+}

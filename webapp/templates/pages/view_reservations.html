@@ -1,0 +1,32 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="center-container">
+    <div class="reservation-list">
+        {% if user_reservations %}
+            <h2>Your Reservations</h2>
+            <ul>
+                {% for reservation in user_reservations %}
+                    <li>
+                        Reservation ID: {{ reservation.id }} <br>
+                        Check-in Date: {{ reservation.check_in_date }} <br>
+                        Check-out Date: {{ reservation.check_out_date }} <br>
+                        Room Type: {{ reservation.get_room_type_display }} <br>
+                        Number of Guests: {{ reservation.num_guests }} <br>
+                        <a href="{% url 'update_reservation' reservation.id %}">Update</a>
+                        <form action="{% url 'cancel_reservation' reservation.id %}" method="post">
+                            {% csrf_token %}
+                            <input type="submit" value="Cancel">
+                        </form>
+                    </li>
+                    <hr>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No reservations found.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

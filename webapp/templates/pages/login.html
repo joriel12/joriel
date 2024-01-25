@@ -1,0 +1,23 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <form method="post" class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Login">
+        </form>
+        <div class="register-link">
+            <p>Don't have an account? <a href="{% url 'register' %}">Register here!</a></p>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

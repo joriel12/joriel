@@ -1,0 +1,23 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="center-container">
+    <div class="payment-details">
+        {% if user_payments %}
+            <h2>My Payment Details</h2>
+            <ul>
+                {% for Payment in user_payments %}
+                    <li>Card Number: {{ Payment.card_number }} </li><br>
+                    <li>Card Expiry: {{ Payment.card_expiry }} </li><br>
+                    <li>Card CVV: {{ Payment.card_cvv }} </li><br>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'view_CustomerDetails' %}" class="back-link">Back</a>
+        {% else %}
+            <p>No details found.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,23 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="feedback-list">
+    <h1>All Feedbacks</h1>
+    {% if view_feedback %}
+        <ul>
+            {% for Feedback in view_feedback %}
+                <li>
+                    Name: {{ Feedback.user }}<br>
+                    Comments: {{ Feedback.comments }}<br>
+                    Rating: {{ Feedback.rating }}<br>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'feedback_form' %}">Write a feedback</a>
+    {% else %}
+        <p>No feedbacks yet</p>
+    {% endif %}
+</div>
+{% endblock %}

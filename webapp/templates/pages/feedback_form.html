@@ -1,0 +1,27 @@
+{% extends 'pages/index.html' %}
+{% load static%}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Give Feedback</title>
+</head>
+<body>
+    <div class="feedback-form-container">
+        <h1>Give Feedback</h1>
+        <form method="post" class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit Feedback">
+        </form>
+    </div>
+</body>
+</html>
+{% if message %}
+    <div class="notification">
+        {{ message }}
+    </div>
+{% endif %}
+
+{% endblock %}

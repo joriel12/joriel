@@ -1,0 +1,52 @@
+/* reservation_styles.css */
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.reservation-list {
+    max-width: 800px;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-list h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.reservation-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reservation-list li {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.reservation-list a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.reservation-list form {
+    display: inline-block;
+}
+
+.reservation-list hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+}

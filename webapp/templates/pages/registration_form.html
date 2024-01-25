@@ -1,0 +1,20 @@
+{% extends 'pages/index.html' %}
+{% load static%}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Give Feedback</title>
+</head>
+<body>
+    <div class="registration-container">
+        <form method="post" class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

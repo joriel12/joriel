@@ -1,0 +1,33 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOTEL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/register.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reservation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/viewReservation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/payment.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/viewPayment.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/customer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/viewCustomer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/feedback.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/viewFeedback.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/footer.css' %}">
+    <link rel="icon" type="images/x-icon" href="{% static '/images/Logo-Trizia-removebg.png' %}">
+</head>
+ <body>
+    {%include 'pages/navbar.html'%}
+
+    {% block content %}
+    
+    {% endblock %}
+
+    {%include 'pages\footer.html'%}
+
+ </body>
+</html>

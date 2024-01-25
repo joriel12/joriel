@@ -1,0 +1,25 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="center-container">
+    <div class="customer-details">
+        {% if user_CustomerDetails %}
+            <h2>My Details</h2>
+            <ul>
+                {% for CustomerDetail in user_CustomerDetails %}
+                    <li>First name: {{ CustomerDetail.first_name }} </li><br>
+                    <li>Last name: {{ CustomerDetail.last_name }} </li><br>
+                    <li>My address: {{ CustomerDetail.address }} </li><br>
+                    <li>My phone number: {{ CustomerDetail.phone_number }} </li><br>
+                    <li>Email: {{ CustomerDetail.email }}</li><br>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'view_payments' %}">View my Payment Details</a>
+        {% else %}
+            <p>No details found.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

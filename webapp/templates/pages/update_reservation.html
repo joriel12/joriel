@@ -1,0 +1,21 @@
+{% extends 'pages/index.html' %}
+{% load static%}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Reservation</title>
+</head>
+<body>
+    <div class="reservation-form-container">
+        <h1>Create Reservation</h1>
+        <form method="post" class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit Reservation">
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}
